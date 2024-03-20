@@ -1,0 +1,15 @@
+
+    <div class="container mt-5">
+        <div class="row m-3">
+            {{#each fruits}}
+            <div class="card" style="width: 18rem;">
+                <img src="{{this.img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.des}}</p>
+                    <a href="#" class="btn btn-primary">{{this.link}}</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>  
+    </div>
