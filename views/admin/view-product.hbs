@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="">
+        <a href="admin/add-product" class="btn btn-warning">Add product</a>
+    </div>
+    <div class="row">
+        <h1 class="">Products</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each fruits}}
+            <tr>
+                <th scope="row">1</th>
+                <td>{{this.name}}</td>
+                <td>{{this.des}}</td>
+                <td>{{this.link}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

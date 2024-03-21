@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET users listing. */
 router.get('/', function(req, res, next) {
+
   let fruits = [
     {
       name:"Apple",
@@ -29,7 +30,17 @@ router.get('/', function(req, res, next) {
       link:"$125"
     }
   ]
-  res.render('index', { fruits,admin:false });
-});
+
+  res.render('admin/view-product',{fruits,admin:true});
+})
+
+router.get('/add-product',function(req,res,next){
+  res.render('admin/add-product',{admin:true});
+
+})
+router.post('/add-product',function(req,res,next){
+  console.log(req.body);
+  res.render('admin/add-product',{admin:true});
+})
 
 module.exports = router;
